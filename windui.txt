@@ -6772,7 +6772,7 @@ x.Visible=true
 end
 end)
 
-local K=w and"Press "..p.ToggleKey.Name.." to open the Window"or"点击按钮重新打开"
+local K=w and"Press "..p.ToggleKey.Name.." to open the Window"or"Click the Button to open the Window"
 
 if not p.IsOpenButtonEnabled then
 n=true
@@ -6780,8 +6780,8 @@ end
 if not n then
 n=not n
 o.WindUI:Notify{
-Title="已隐藏UI",
-Content="你已隐藏UI. "..K,
+Title="Minimize",
+Content="You've closed the Window. "..K,
 Icon="eye-off",
 Duration=5,
 }
@@ -6918,7 +6918,7 @@ end
 end
 
 if not w and p.IsOpenButtonEnabled then
-b.AddSignal(y.TextButton.MouseButton1kck,function()
+b.AddSignal(y.TextButton.MouseButton1Click,function()
 x.Visible=false
 p:Open()
 end)
